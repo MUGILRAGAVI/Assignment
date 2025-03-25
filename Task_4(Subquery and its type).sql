@@ -5,7 +5,7 @@ from Enrollments e
 where e.course_id=c.course_id) as student_count
 from Courses c;
 
---Identify the student(s) who made the highest payment. Use a subquery to find the maximum payment amount and then retrieve the student(s) associated with that amount.
+--Identify the student(s) who made the highest payment.Use a subquery to find the maximum payment amount and then retrieve the student(s) associated with that amount.
 
 select s.first_name, s.last_name
 from Students s
@@ -14,7 +14,7 @@ from Payments
 where amount=(select max(amount)from payments)
 );
 
---Retrieve a list of courses with the highest number of enrollments. Use subqueries to find the course(s) with the maximum enrollment count.
+--Retrieve a list of courses with the highest number of enrollments.Use subqueries to find the course(s) with the maximum enrollment count.
 
 select c.course_name 
 from Courses c
